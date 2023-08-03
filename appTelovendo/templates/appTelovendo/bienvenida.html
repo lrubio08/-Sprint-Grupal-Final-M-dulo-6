@@ -1,0 +1,27 @@
+{%extends "appTelovendo/base.html"%}
+
+{%block title%} Bienvenido {%endblock%}
+{%block dropdown%}
+    <div class="btn-group m-2">
+        <button type="button w-100" class="btn btn-secondary dropdown-toggle mr-2" data-bs-toggle="dropdown" aria-expanded="false">
+            Mi perfil
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end w-100 bg-dark ">
+            <li><button class="dropdown-item text-light" type="button">Mis promociones</button></li>
+            <li><button class="dropdown-item text-light" type="button">Mi carrito</button></li>
+            <li><button class="dropdown-item text-light" type="button">Configuraciones</button></li>
+        </ul>
+    </div>
+{%endblock%}
+
+{%block content%}
+
+
+<div class="container">
+    <h1 class="text-center">¡Bienvenido {{ user.first_name }}!</h1>
+</div>
+
+
+
+
+{%endblock%}

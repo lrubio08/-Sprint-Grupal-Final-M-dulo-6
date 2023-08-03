@@ -1,0 +1,31 @@
+{%extends "appTelovendo/base.html"%}
+
+{%block title%} Te Lo Vendo - clientes {%endblock%}
+{%load static%}
+
+{%block content%}
+    <link rel="stylesheet" href="{%static 'css/stilos.css'%}">
+    <h1 class="text-center">Datos de los clientes registrados</h1>
+    <div class="d-flex flex-row justify-content-center">
+    {% for cliente in usuarios %}
+        <div class="card card_cliente border-dark" style="width: 18rem;">        
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item border-dark">Nombre: {{ cliente.nombre }}</li>
+            <li class="list-group-item border-dark">Apellido: {{ cliente.apellido }}</li>
+            <li class="list-group-item border-dark">Edad: {{ cliente.edad }}</li>
+            <li class="list-group-item border-dark">Mail: {{ cliente.mail }}</li>
+            <li class="list-group-item border-dark">Telefono: {{ cliente.telefono }}</li>
+            </ul>
+        </div><br>
+    {% endfor %}
+    </div>
+
+
+{%endblock%}
+
+
+
+
+
+
+  
